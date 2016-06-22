@@ -1,0 +1,21 @@
+CREATE TABLE `members` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `username` VARCHAR(30) NOT NULL,
+    `email` VARCHAR(50) NOT NULL,
+    `password` CHAR(128) NOT NULL
+) ENGINE = InnoDB;
+
+-----
+
+CREATE TABLE IF NOT EXISTS `tblSerial` (
+`serialID` int(11) NOT NULL,
+  `serialKey` varchar(256) NOT NULL,
+  `serialStatus` int(1) NOT NULL,
+  `serialLatestTimestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `serialData` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `tblSerial`
+ ADD PRIMARY KEY (`serialID`);
+ALTER TABLE `tblSerial`
+ MODIFY `serialID` int(11) NOT NULL AUTO_INCREMENT;

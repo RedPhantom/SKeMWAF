@@ -1,0 +1,25 @@
+README
+======
+
+Required configuration for peoper functioning of the application:
+
+Database:
+	Root / SELECT, INSERT, DELETE etc... permission user name & password
+	A database name
+	
+	One part of app configuration is in ./files/p/dbconnect.php
+	This database config file is used to perform serial data managment and custom
+	user queries.
+	
+	Second part of app database configuration is in ./files/p/ulogin/config/pdo.inc.php.
+	This file was slightly modified although you can replace the whole ulogin folder in either
+	a newer version or the original file, it just requires more configuration to do.
+	Also take a look at ./files/p/ulogin/config/main.inc.php.
+	
+	You can custom ./index.php to your needs. Reading of the ulogin documentation
+	is highly recommended for proper set up of the system.
+	
+	The database snapshot is located in ./dbsnapshot.sql, and you can import it to your
+	database via phpmyadmin or just execute the file. It comes with a built in user:
+		username:	itay
+		password:	1234

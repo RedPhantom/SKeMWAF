@@ -1,0 +1,20 @@
+,./files/p/homepage.php,Home
+dashboard,./files/p/dashboard.php,Dashboard
+lookup,./files/p/getData.php,Serial Key Lookup
+gen,./files/p/serialGen.php,Generate New Serial Keys
+getSerial,./files/p/getSerial.php,Get a Serial Key
+submitSerial,./files/p/submitSerial.php,Activate a Serial Key
+###,###,###,###
+login,./files/p/account/login.php,Login
+register,./files/p/account/register.php,Register
+logout,./files/p/account/logout.php,Log Out
+profile,./files/p/account/profile.php,User Profile
+###,###,###,###
+reg_fail,./files/p/messages/reg_fail.htm,Registration Failed
+reg_success,./files/p/messages/reg_success.htm,Registration Succeeded
+###,###,###,###
+login_fail,./files/p/messages/login_fail.htm,Login Failed
+login_success,./files/p/messages/login_success.htm,Login Succeeded
+###,###,###,###
+users,./files/p/account/manageUser.php,Manage Users
+serials,./files/p/account/manageSerial.php,Manage Serial Keys

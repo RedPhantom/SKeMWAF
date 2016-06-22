@@ -1,0 +1,35 @@
+body,p,div {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-family: "Roboto";
+}
+p {
+margin-left: 0px;
+}
+a:hover {
+	color: #99ccff;
+}
+h1,h2,h3,h4,h5 {
+	text-transform: uppercase;
+	font-family: "Roboto";
+
+}
+.navbar-brand {
+	text-transform: uppercase;
+	font-family: "Roboto";
+}
+
+.showcase {
+	width:33%;
+	vertical-align: top;
+}
+a {
+	color: #6693D7;
+	font-weight: 300;
+}
+.nav-pills > li > a:hover {
+color: #0066ff;
+}
+.nav-pills > li > a {
+color: #70A9FF;
+}
