@@ -21,7 +21,7 @@
 	$pageAddr  = getPageAddr($pageId);
 
 	/* The "YOU MUST LOG IN" Message. */
-	$must_login = make_message(0, 'You do not have permission to view this page. <a href="./?p=login">Log in</a>.');
+	$must_login = make_message(0, 'You need to be logged in to view this page. <a href="./?p=login">Log in</a>.');
 	
 	function checkPermission($_username, $_permission, $_mysqli) {
 		$_username = stripslashes($_username);

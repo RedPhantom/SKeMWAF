@@ -36,7 +36,7 @@ if ($count == 1) {
 	exit(); // Stop from proceeding to register the serial key.
 }
 
-$serialUpdateQuery = "UPDATE tblSerial SET serialStatus=1,serialData='$dataStr',serialLatestTimestamp='$timedate' WHERE serialKey='$serial'";
+$serialUpdateQuery = "UPDATE tblSerial SET serialStatus=1,serialData='$dataStr',serialLatestTimestamp='NOW()' WHERE serialKey='$serial'";
 $mysqli->query($serialUpdateQuery); // Serial is updated. Process finished.
 
 $mysqli->close();

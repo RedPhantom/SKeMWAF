@@ -1,4 +1,4 @@
-CHANGE LOG - version 0.9
+CHANGE LOG - version 0.9.1
 ========================
 												Serial Key Managment
 													    and
@@ -20,24 +20,9 @@ CHANGE LOG - version 0.9
 					██║   ██║   ██╔══██║  ╚██╔╝      ██╔══██║╚════██║██╔══██║  ╚██╔╝  ██╔══██║██║   ██║
 					██║   ██║   ██║  ██║   ██║       ██║  ██║███████║██║  ██║   ██║   ██║  ██║╚██████╔╝
 					╚═╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ 
-
-- Added:
-	Account Managment
-	Serial Key Managment
-	Secure Login Support
-	Separate Homepage
-	Permission-Protected pages
 	
 - Fixed:
-	Query error in getSerial.php
-	CSS fix for login & registration pages
-	Redeclarations of database & login objects were fixed
-	
-- Technology Used:
-	Bootstrap		] CSS
-	Font Awesome	]
-	MySQL		]
-	PHP			] DEVELOPMENT TOOLS
-	uLogin		]
-- To be fixed next version (0.9.1; not urgent):
-	TimeDate object exception in serial lookup
+	"You need to be logged in" message	Update index.php
+	TimeDate misuse in Serial Lookup & Serial Activation: 
+		now using MySQL NOW() function to retain format of date and time.	Update getData.php & validate.php
+	Fixed footer	Update Footer.htm

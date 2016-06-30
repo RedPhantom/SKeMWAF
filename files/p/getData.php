@@ -36,30 +36,40 @@ Enter the serial ID number to receive information about the serial.
 			if ($result->num_rows > 0) {
 				while ($row = $result->fetch_assoc()) {
 					$timestamp = $row['serialLatestTimestamp'];
-					$dt = new DateTime("@$timestamp");
-					$datetime = $dt->format('Y-m-d H:i:s');
 					$dataString = $row['serialData'];
-					parse_str($dataString, $data);
-					$osName = $data['osName'];
-					$osPlatform = $data['osPlatform'];
-					$osVersion = $data['osVersion'];
+					if (! $dataString == "") {
+						parse_str($dataString, $data);
+						$osName = $data['osName'];
+						$osPlatform = $data['osPlatform'];
+						$osVersion = $data['osVersion'];
+					} else {
+						$message = "Serial data (Activated OS, Version etc...) could not be received.";
+					}
 					echo "Serial ID: $serialId<br />";
 					switch ($row["serialStatus"]) {
 					case 0:
-						$status = "pending";
+						$status = "pending give-away";
 						break;
 
 					case 1:
-						$status = "active";
+						$status = "given away, pending activation";
 						break;
 
 					case 2:
 						$status = "disactivated";
 						break;
+					
+					case 3:
+						$status = "Activated";
+						break;
 					}
 
-					echo ("Status: <b>$status</b> (on $datetime, timestamp $timestamp)<br />");
-					echo ("System data: running <b>$osName</b> ($osPlatform) $osVersion<br />");
+					echo ("Status: <b>$status</b> on $timestamp<br />");
+					if (! isset($message)) {
+						echo ("System data: running <b>$osName</b> ($osPlatform) $osVersion<br />");
+					} else {
+						echo $message;
+					}
 				}
 			}
 			else {
