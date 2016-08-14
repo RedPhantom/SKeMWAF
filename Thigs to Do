@@ -1,0 +1,34 @@
+Things to do - To version 0.9
+Write version docs and choose a version system
+1. fix errors in getSerial.php:
+	- fetch_assoc() not found << fixed.
+	- Time of generation invalid -  CURRENT .
+2. profile page - complete
+3. user managment: << COMPLETE
+	- User control panel <<
+	- user permissions (modify database) so only permission sysop can create and manage accouts. << Complete
+		  + Add the 'permissions' INT field:
+			Value	Role			Meaning
+			0		Regular User	Get serial, generate serial and look up data
+			1		Mod	(Moderator)	0 + serial control
+			2		SysOp			1 + account managment
+		  + Build the account managment page.
+			- Change permission
+			- Add / Delete account
+			- Change Password
+4. serial key managment << COMPLETE
+5. Safe registration (utilize all of uLogin methods) << COMPLETE
+6. Register form css fix << COMPLETE
+  + universal users pages css glitch fix
+7. Replace dashboard with homepage << COMPLETE
+	+ add login to dashboard << Complete
+8. Convert SQL code to work with STMT. (serialGen, login etc...) << On hold due to technical issues. First get to TST-B1.0 and then reconsider.
+9. navbar login name instead of text "View Profile" << COMPLETE
+10. Putting secure session and uLogin methods in index.php instead of independent pages to reduce load time << Complete
+11. Remove re-declarations from code segments (original code was moved to index.php). << COMPLETE
+12. Redirection javascript:
+window.setTimeout(function() {
+    window.location.href = 'http://www.google.com';
+}, 5000);
+13. Make a pagePermissionCheck(username,requiredPermission) as Boolean function. << Complete, in head of index.php.
+X. Proceed To GET url from login page <-- No. Security issue.

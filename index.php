@@ -1,6 +1,10 @@
 	<?php
+	define("APP_VERSION","0.9.2");
+	
 	require_once('./files/p/ulogin/config/all.inc.php');
 	require_once('./files/p/ulogin/main.inc.php');
+	require_once('./config.php');
+	
 	if (!sses_running())
 	sses_start();
 		
@@ -17,7 +21,7 @@
 	include("./mod/ptitle.php"); // Page titles module.
 	
 	$pageTitle = getPageTitle($pageId);
-	$pageHTitle = "Serial Managment System - " . $pageTitle; // Modify the text field to change the site name. $pageTitle is the name of the file displayed in the <title> header tag.
+	$pageHTitle = PAGE_TITLE_PREFIX . $pageTitle; // Modify the text field to change the site name. $pageTitle is the name of the file displayed in the <title> header tag.
 	$pageAddr  = getPageAddr($pageId);
 
 	/* The "YOU MUST LOG IN" Message. */
@@ -96,7 +100,8 @@
 </div>
 <?php
 		echo (file_get_contents("./widgets/htm/footer.htm")); //Display footer for copyright and legel info. 	
-		if (isset($mysqli))	 // Close MySQL connection, if is set
+		echo ("<sub>Version ". APP_VERSION ."</sub>");
+		
 		if (isset($mysqli))	 // Close MySQL connection, if is set
 			$mysqli->close();	
 	?>

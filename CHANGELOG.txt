@@ -1,4 +1,4 @@
-CHANGE LOG - version 0.9.1
+CHANGE LOG - version 0.9.2
 ========================
 												Serial Key Managment
 													    and
@@ -21,8 +21,27 @@ CHANGE LOG - version 0.9.1
 					██║   ██║   ██║  ██║   ██║       ██║  ██║███████║██║  ██║   ██║   ██║  ██║╚██████╔╝
 					╚═╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ 
 	
-- Fixed:
-	"You need to be logged in" message	Update index.php
-	TimeDate misuse in Serial Lookup & Serial Activation: 
-		now using MySQL NOW() function to retain format of date and time.	Update getData.php & validate.php
-	Fixed footer	Update Footer.htm
+- Added:
+	
+	Database connection information for the test site was updated to reduce risk when publishing
+	the code to GitHub. Username and password can be changed, see README for more information
+	on how to import the application database.
+	
+	Application version is now displayed through index.php constant and not through the footer.
+	It was adjusted accordingly.
+
+	Again, it is very important to read ALL ul_login documentation before installing the site.
+	It requires applying SSL keys and certifications, disabling the DEBUG option in ul_login
+	config and more modifications required to make the installed and final version
+	as secure as possible.
+	
+	A config.php configuration file to remove the use to edit many files. For more information,
+	read README.	
+	
+NOTE: SETTING UP THE SYSTEM WITHOUT FULLY READING AND UDNERSTANDING README AND ALL OF THE OTHER
+DOCUMENTATION OF BOTH THIS APPLICATION AND BOTH THE ULOGIN LIBRARY MAY AND PROBABLY WILL LEAD
+TO MALFUNCTION. TO SAVE YOUR TIME TO WRITE A TICKET AND MY EFFORT TO READ AND RESPOND, JUST
+GO OVER THE ATTACHED DOCUMENTATION FILES.
+
+If there is collision between the wiki and the application files documentation (i.e. README or CHANGELOG), the
+latter applies.

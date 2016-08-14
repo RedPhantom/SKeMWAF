@@ -1,14 +1,12 @@
 <?php
-
-// TODO: change user names and passwords back to "CHANGE ME!!!"
-// TODO: rename dbname back to ulogin
+require_once("../../../config.php");
 
 // ------------------------------------------------
 //	DATABASE ACCESS
 // ------------------------------------------------
 
 // Connection string to use for connecting to a PDO database.
-define('UL_PDO_CON_STRING', 'mysql:host=localhost;dbname=SerialVal');
+define('UL_PDO_CON_STRING', 'mysql:host=' . HOST . ';dbname=' . DATABASE . '');
 // Example for SQLite: 
 //define('UL_PDO_CON_STRING', 'sqlite:/path/to/db.sqlite');
 
@@ -37,8 +35,8 @@ define('UL_PDO_CON_INIT_QUERY', "");
 // Used to log users in.
 // Database user with SELECT access to the
 // logins table.
-$root = "CHANGE ME!";
-$pass = "CHANGE ME!";
+$root = USERNAME;
+$pass = PASSWORD;
 
 define('UL_PDO_AUTH_USER', $root);
 define('UL_PDO_AUTH_PWD', $pass);
