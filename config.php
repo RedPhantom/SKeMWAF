@@ -20,7 +20,7 @@
 
 define("HOST", "localhost");     	// The host you want to connect to.
 define("USER", "root");   			// The user with required permissions to run the application. Doesn't have to be a root user.
-define("PASSWORD", "2208351");   	// The password for said user. 
+define("PASSWORD", "1234");   	// The password for said user. 
 define("DATABASE", "SerialVal"); 	// The name of the database in the server.	
 
 define("PAGE_TITLE_PREFIX", "Serial Managment System - "); // The text to be infront of the individual page name in the <title> of the page.
